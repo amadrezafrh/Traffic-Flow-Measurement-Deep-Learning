@@ -136,7 +136,7 @@ if features == 'angle':
 		end = time.time()
 		print(f'Spectral calculation time: {end - start}')
 
-	except killed:
+	except MemoryError:
 		Spectral = False
 		print('Cannot calculate Spectral Clustering because of lack of memory.')
 		pass
@@ -174,7 +174,7 @@ if features == 'location':
 		end = time.time()
 		print(f'Spectral calculation time: {end - start}')
 
-	except killed:
+	except MemoryError:
 
 		Spectral = False
 		print('Cannot calculate Spectral Clustering because of lack of memory.')
@@ -213,7 +213,7 @@ if features == 'all':
 		end = time.time()
 		print(f'Spectral calculation time: {end - start}')
 
-	except killed:
+	except MemoryError:
 
 		Spectral = False
 		print('Cannot calculate Spectral Clustering because of lack of memory.')
